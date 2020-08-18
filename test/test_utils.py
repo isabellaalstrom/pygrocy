@@ -16,6 +16,12 @@ class TestUtils(TestCase):
         date_obj = utils.parse_date(date_str)
 
         assert date_obj is None
+        
+    def test_parse_date_empty_string(self):
+        date_str = ""
+        date_obj = utils.parse_date(date_str)
+
+        assert date_obj is None
 
     def test_parse_int_valid(self):
         int_str = "2"
